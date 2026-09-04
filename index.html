@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Pizzeria Demo – Lämna en recension</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: #f5f5f5;
+      color: #222;
+    }
+
+    .card {
+      width: 100%;
+      max-width: 420px;
+      background: white;
+      padding: 35px 25px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    }
+
+    .pizza {
+      font-size: 60px;
+      margin-bottom: 10px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 30px;
+    }
+
+    .stars {
+      font-size: 36px;
+      letter-spacing: 4px;
+      margin: 18px 0;
+    }
+
+    p {
+      font-size: 17px;
+      color: #666;
+      line-height: 1.5;
+    }
+
+    .review-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 15px 25px;
+      border-radius: 12px;
+      background: #111;
+      color: white;
+      text-decoration: none;
+      font-size: 17px;
+      font-weight: bold;
+      cursor: pointer;
+      border: none;
+    }
+
+    .review-button:hover {
+      opacity: 0.85;
+    }
+
+    #demo-message {
+      display: none;
+      margin-top: 20px;
+      padding: 15px;
+      border-radius: 10px;
+      background: #f0f0f0;
+      color: #555;
+    }
+
+    .small {
+      margin-top: 25px;
+      font-size: 13px;
+      color: #999;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="card">
+
+    <div class="pizza">🍕</div>
+
+    <h1>Pizzeria Demo</h1>
+
+    <div class="stars">
+      ★★★★★
+    </div>
+
+    <p>
+      Tyckte du om ditt besök?
+    </p>
+
+    <p>
+      Lämna gärna en recension!
+    </p>
+
+    <button class="review-button" onclick="showDemo()">
+      Skriv en recension
+    </button>
+
+    <div id="demo-message">
+      ⭐ <strong>Demo</strong><br><br>
+      Här skulle kundens Google-recensionsformulär öppnas.
+    </div>
+
+    <div class="small">
+      DEMO – Detta är inte en riktig Google-recension.
+    </div>
+
+  </div>
+
+  <script>
+    function showDemo() {
+      document.getElementById("demo-message").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
